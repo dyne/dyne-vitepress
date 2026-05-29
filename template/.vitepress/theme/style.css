@@ -268,7 +268,7 @@ body {
 
 .dyne-brand.nav .dyne-brand__logotype {
   flex: 0 0 auto;
-  width: 10rem;
+  width: 4rem;
   height: auto;
   max-width: none;
 }
@@ -539,7 +539,7 @@ div[class*='language-'] {
 
   .dyne-brand.nav .dyne-brand__logotype {
     flex: 0 0 auto;
-    width: 7.5rem;
+    width: 3rem;
     height: auto;
     max-width: none;
   }
