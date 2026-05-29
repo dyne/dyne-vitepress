@@ -199,13 +199,37 @@ body {
   letter-spacing: 0.01em;
 }
 
-.VPNavBar .title span {
-	font-weight: 800;
-	letter-spacing: .2em;
-	font-size: 2rem;
+.VPNavBar .title {
+  min-inline-size: 0;
 }
 
-.VPNavBar .title span,
+.VPNavBar .content {
+  flex: 0 0 auto;
+}
+
+.VPNavBarTitle {
+  min-inline-size: 0;
+}
+
+.VPNavBarTitle .title {
+  display: flex;
+  align-items: center;
+  min-inline-size: 0;
+  max-inline-size: calc(100vw - 5rem);
+}
+
+.VPNavBarTitle .title > span:not(.dyne-brand) {
+  flex: 1 1 auto;
+  min-inline-size: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 800;
+  letter-spacing: clamp(0.04em, 0.8vw, 0.2em);
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.VPNavBarTitle .title > span:not(.dyne-brand),
 .VPNavBarMenuLink,
 .VPLocalNav .menu-text,
 .VPSidebarItem.level-0 .text,
@@ -257,7 +281,7 @@ body {
 
 .dyne-brand.nav {
   flex: 0 0 auto;
-  margin-right: 16rem;
+  margin-right: clamp(0.75rem, 6vw, 4rem);
 }
 
 .dyne-brand.nav .dyne-brand__mark {
@@ -528,7 +552,7 @@ div[class*='language-'] {
 
 @media (max-width: 959px) {
   .dyne-brand.nav {
-    margin-right: 6rem;
+    margin-right: 0.75rem;
   }
 
   .dyne-brand.nav .dyne-brand__mark {
@@ -555,5 +579,26 @@ div[class*='language-'] {
   div[class*='language-'],
   .vp-doc table {
     border-radius: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dyne-brand.nav {
+    gap: 0.375rem;
+    margin-right: 0.5rem;
+  }
+
+  .dyne-brand.nav .dyne-brand__mark {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .dyne-brand.nav .dyne-brand__logotype {
+    display: none;
+  }
+
+  .VPNavBarTitle .title > span:not(.dyne-brand) {
+    font-size: clamp(0.75rem, 4vw, 1rem);
+    letter-spacing: 0.08em;
   }
 }
