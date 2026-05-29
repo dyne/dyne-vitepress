@@ -16,9 +16,9 @@
               :href="social.href"
               :aria-label="`Follow Dyne.org on ${social.name}`"
               target="_blank"
-              rel="me noopener"
+              :rel="social.name === 'mastodon' ? 'me noopener' : 'noopener'"
             >
-              {{ social.shortName }}
+              <SocialIcon :name="social.name" />
             </a>
           </nav>
         </div>
@@ -45,19 +45,8 @@
 </template>
 
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
+import SocialIcon from './SocialIcon.vue'
+import { socialLinks } from './social-icons'
 
-const socialLinks = [
-  { name: 'twitter', shortName: 'Tw', href: 'https://socials.dyne.org/twitter' },
-  { name: 'telegram', shortName: 'Tg', href: 'https://socials.dyne.org/telegram' },
-  { name: 'github', shortName: 'Gh', href: 'https://socials.dyne.org/github' },
-  { name: 'linkedin', shortName: 'In', href: 'https://socials.dyne.org/linkedin' },
-  { name: 'instagram', shortName: 'Ig', href: 'https://socials.dyne.org/instagram' },
-  { name: 'facebook', shortName: 'Fb', href: 'https://socials.dyne.org/facebook' },
-  { name: 'youtube', shortName: 'Yt', href: 'https://socials.dyne.org/youtube' },
-  { name: 'mastodon', shortName: 'Ma', href: 'https://socials.dyne.org/mastodon' },
-  { name: 'medium', shortName: 'Me', href: 'https://socials.dyne.org/medium' },
-  { name: 'discord', shortName: 'Di', href: 'https://socials.dyne.org/discord' },
-  { name: 'matrix', shortName: 'Mx', href: 'https://socials.dyne.org/matrix' }
-]
+const currentYear = new Date().getFullYear()
 </script>
