@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Dyne VitePress',
   description: 'Dyne-styled documentation scaffold',
+  base: process.env.BASE_PATH ?? '/',
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/guide' },
@@ -21,4 +22,3 @@ export default defineConfig({
     ]
   }
 })
-
