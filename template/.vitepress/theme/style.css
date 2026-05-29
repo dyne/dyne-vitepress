@@ -2,7 +2,7 @@
 
 :root {
   color-scheme: light;
-  --vp-font-family-base: "Avenir Next", Avenir, "Segoe UI", Inter, ui-sans-serif, system-ui, sans-serif;
+  --vp-font-family-base: "Inter", "Segoe UI", Arial, sans-serif;
   --vp-font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
 
   --vp-c-bg: #ffeedd;
