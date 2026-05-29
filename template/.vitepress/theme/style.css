@@ -259,7 +259,7 @@ body {
   align-items: center;
   gap: .5rem;
   line-height: 1;
-  
+
 }
 
 .dyne-brand__mark,
@@ -566,9 +566,9 @@ div[class*='language-'] {
 
 .dyne-footer__content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
   opacity: 0.72;
 }
 
@@ -588,12 +588,12 @@ div[class*='language-'] {
 }
 
 .dyne-footer__mark {
-  width: 5rem;
-  height: 5rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 .dyne-footer__logotype {
-  width: 7rem;
+  width: 9rem;
   height: auto;
 }
 
@@ -606,6 +606,14 @@ div[class*='language-'] {
 .dark .dyne-footer__mark,
 .dark .dyne-footer__logotype {
   filter: invert(1);
+}
+
+.dyne-footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  min-width: 0;
 }
 
 .dyne-footer__socials {
@@ -730,9 +738,14 @@ div[class*='language-'] {
     padding: 2rem 1.5rem 2.5rem;
   }
 
+  .dyne-footer__content {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   .dyne-footer__top {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-end;
   }
 
   .dyne-footer__socials {

@@ -1,8 +1,8 @@
 export type SocialIconName =
-  | 'twitter'
-  | 'telegram'
   | 'github'
   | 'linkedin'
+  | 'twitter'
+  | 'telegram'
   | 'instagram'
   | 'facebook'
   | 'youtube'
@@ -12,16 +12,16 @@ export type SocialIconName =
   | 'matrix'
 
 export const socialLinks: Array<{ name: SocialIconName; href: string }> = [
-  { name: 'twitter', href: 'https://socials.dyne.org/twitter' },
-  { name: 'telegram', href: 'https://socials.dyne.org/telegram' },
-  { name: 'github', href: 'https://socials.dyne.org/github' },
   { name: 'linkedin', href: 'https://socials.dyne.org/linkedin' },
+  { name: 'github', href: 'https://socials.dyne.org/github' },
   { name: 'instagram', href: 'https://socials.dyne.org/instagram' },
+  { name: 'twitter', href: 'https://socials.dyne.org/twitter' },
   { name: 'facebook', href: 'https://socials.dyne.org/facebook' },
   { name: 'youtube', href: 'https://socials.dyne.org/youtube' },
+//  { name: 'medium', href: 'https://socials.dyne.org/medium' },
+//  { name: 'discord', href: 'https://socials.dyne.org/discord' },
   { name: 'mastodon', href: 'https://socials.dyne.org/mastodon' },
-  { name: 'medium', href: 'https://socials.dyne.org/medium' },
-  { name: 'discord', href: 'https://socials.dyne.org/discord' },
+  { name: 'telegram', href: 'https://socials.dyne.org/telegram' },
   { name: 'matrix', href: 'https://socials.dyne.org/matrix' }
 ]
 
