@@ -34,4 +34,6 @@ content with the template versions.
 - `template/.vitepress/theme/`: Dyne-branded DefaultTheme extension
 - `template/public/`: Dyne logo/logotype and favicon assets
 - `template/*.md`: replaceable lorem ipsum content
+- `man-to-md.pl`: converts `.TH`-based nroff manual pages from standard input
+  to Markdown on standard output
 

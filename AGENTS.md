@@ -86,6 +86,33 @@ treat this repository as the source template and the parent as the target.
 - Keep wording faithful to the existing site, but clean obvious typos and
   obsolete presentation markup when converting to markdown.
 
+## Publishing Manual Pages
+
+When the source project contains nroff man pages, use the bundled
+`man-to-md.pl` converter instead of transcribing them by hand. The script reads
+one man page from standard input and writes Markdown to standard output:
+
+```sh
+perl /path/to/dyne-vitepress/man-to-md.pl < path/to/tool.1 > tool.1.md
+```
+
+- Run the command once per man page and place the generated `.md` files in the
+  target VitePress content tree.
+- Keep the man page as the source of truth. Regenerate the Markdown after the
+  source changes; do not maintain divergent prose in both files.
+- Use `-c` to mark generated output when useful:
+  `perl /path/to/dyne-vitepress/man-to-md.pl -c < tool.1 > tool.1.md`.
+- The converter supports nroff man macros beginning with `.TH`. It rejects mdoc
+  pages beginning with `.Dd` or `.Dt`; convert those with an appropriate
+  external tool or document the unsupported input instead of rewriting the
+  source.
+- Inspect the generated Markdown for headings, synopsis blocks, lists, links,
+  and escaped characters before publishing.
+- Add published manual pages to the VitePress nav or sidebar when appropriate,
+  then run the normal build validation.
+- Run `perl man-to-md.pl --help` from this repository to see optional section
+  insertion, formatting, title-casing, and dash-handling flags.
+
 ## Validation
 
 After changes, run from the target site:
